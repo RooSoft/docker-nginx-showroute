@@ -1,6 +1,8 @@
 # docker-nginx-showroute
 Proof-of-concept about how to route web into unexposed Docker containers.
 
+When successfully setup, an NGINX server will be created and be exposed to the host. It will be able to send requests to a the web server in another container. There will be no way to access the web server without going through NGINX first.
+
 ![Explanation](https://github.com/RooSoft/docker-nginx-showroute/raw/master/example.png)
 
 ## Steps to reproduce
@@ -32,3 +34,5 @@ Example: http://localhost/chat/start will map to http://localhost/start in the w
 Browsing `localhost/chat/start` should return something similar to this `Time: Sun Feb 12 2017 15:28:39, URL: /start`.
 
 This means that the NGINX server got the request, routed it to the "chat" web server, got its response and sent it as a response. The "chat" server simply answers by sending the URL it got from the NGINX request.
+=======
+
