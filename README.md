@@ -34,5 +34,3 @@ Example: http://localhost/chat/start will map to http://localhost/start in the w
 Browsing `localhost/chat/start` should return something similar to this `Time: Sun Feb 12 2017 15:28:39, URL: /start`.
 
 This means that the NGINX server got the request, routed it to the "chat" web server, got its response and sent it as a response. The "chat" server simply answers by sending the URL it got from the NGINX request.
-=======
-
