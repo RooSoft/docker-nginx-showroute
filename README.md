@@ -31,6 +31,8 @@ Now you should be able to reach a local server on port 80 that's answering to an
 
 Example: http://localhost/chat/start will map to http://localhost/start in the web server.
 
-Browsing `localhost/chat/start` should return something similar to this `Time: Sun Feb 12 2017 15:28:39, URL: /start`.
+Browsing `localhost/chat/start` should return something similar to this:
+
+`172.19.0.3 Time: Tue Feb 14 2017 13:20:38, URL: /chat/1`.
 
 This means that the NGINX server got the request, routed it to the "chat" web server, got its response and sent it as a response. The "chat" server simply answers by sending the URL it got from the NGINX request.

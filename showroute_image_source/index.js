@@ -1,9 +1,10 @@
 var express = require('express');
 var dateFormat = require('dateformat');
+var ip = require('ip');
 var app = express();
 
 app.use(function (req, res, next) {
-    message = `Time: ${dateFormat(Date.now())}, URL: ${req.originalUrl}\n`;
+    message = `${ip.address()} Time: ${dateFormat(Date.now())}, URL: ${req.originalUrl}\n`;
     console.log(message);
     res.send(message);
 });
